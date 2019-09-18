@@ -2,7 +2,7 @@
 
 ## Overview
 
-We'll cover propTypes and why they're a handy tool when working with components. 
+We'll cover propTypes and why they're a handy tool when working with components.
 
 ## Objectives
 1. Describe how to use `PropTypes` declarations
@@ -25,7 +25,7 @@ We'll take a moment to stop and think about how we want to represent our order. 
 - `size` — a string to indicate the size of the order, defaults to `'regular'`
 - `scoops` — an array of ice cream flavors
 - `orderInfo` — an object containing data about the ice cream order
-
+p
 Our `<Order />` component would roughly look like this:
 
 ```js
@@ -59,7 +59,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Order extends React.Component {
-  
+
   render() {
     // ...
   }
@@ -82,7 +82,7 @@ Order.propTypes = {
 ```
 
 We just told our component to expect the `cone` prop to be a boolean. There are a couple of important things to note here:
- 
+
 - Notice the capitalization: the property on the component class is always called `propTypes`, while the React prop types you assign to them are capitalized as `PropTypes`. This is easy to mess up, so if our propTypes don't validate, that's the first place we should look!
 - Some types are not called what you'd expect them to be: a boolean is `bool`, a function is `func`, and so on. Using the [reference on PropTypes][proptypes-documentation] is probably a good idea if you're just starting out with this stuff.
 
@@ -143,6 +143,8 @@ Order.propTypes = {
     orderedAt: PropTypes.number.isRequired // We're using UNIX timestamps here
   }).isRequired
 };
+
+Read
 ```
 
 Using the `shape` PropType, we can further validate our component's props to be even more specific, and to be _doubly_ sure that we're getting the right data. Great success!
